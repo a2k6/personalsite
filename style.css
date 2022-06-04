@@ -1,0 +1,8 @@
+/* GLOBALS */
+:root{
+
+}
+* {
+    user-select: none;
+    overscroll-behavior: none;
+}
