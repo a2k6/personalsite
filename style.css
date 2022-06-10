@@ -1,8 +1,48 @@
 /* GLOBALS */
 :root{
-
+    /*Insert variables and other such items here*/
+    --nav-size: 3vw;
+    --site-size: calc(100vw - var(--nav-size));
+    --intro-txt-glow-color: #ffffff;
 }
 * {
     user-select: none;
     overscroll-behavior: none;
+}
+
+.body{
+    
+}
+
+.intro {
+    vertical-align: middle;
+    width: var(--site-size);
+    height: 100vh;
+}
+
+.intro-img {
+    width: 100vw;
+    height: 100vh;
+    overflow: cover;
+}
+
+.intro-text {
+    position: relative;
+    text-align: left;
+    padding-left: 15vw;
+    top: -50%;
+    text-shadow: 0 0 10px var(--intro-txt-glow-color), 0 0 20px var(--intro-txt-glow-color), 0 0 30px var(--intro-txt-glow-color), 0 0 40px var(--intro-txt-glow-color), 
+    0 0 50px var(--intro-txt-glow-color), 0 0 60px var(--intro-txt-glow-color), 0 0 70px var(--intro-txt-glow-color); 
+}
+
+.intro-title {
+    font-size: 7.5vw;
+}
+
+.intro-blurb {
+    font-size: 2.5vw;
+}
+
+.about {
+
 }
