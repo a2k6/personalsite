@@ -10,9 +10,22 @@
     overscroll-behavior: none;
 }
 
-.body{
-    
-}
+/* Scrollbar stuff */
+@-moz-document url-prefix() { /* Disable scrollbar for Firefox */
+    html{
+      scrollbar-width: none;
+    }
+  }
+  body {
+    margin: 0; /* remove default margin */
+    scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+    -ms-overflow-style: none;  /* Disable scrollbar IE 10+ */
+    overflow-y: scroll;
+  }
+  body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+  }
 
 .intro {
     vertical-align: middle;
@@ -40,9 +53,59 @@
 }
 
 .intro-blurb {
+    font-family:"JetBrains Mono", monospace;
     font-size: 2.5vw;
+    letter-spacing: -0.2vw;
+}
+
+.scroll-stuff {
+  position: absolute;
+}
+
+.scroll-text {
+  color: #ffffff;
+}
+
+.scroll-reminder {
+  top: 90%;
+  left: 94%;
+  transform: translate(-50%,-50%);
+  width: 80px;
+  height: 60px;
+  transform: rotate(90deg);
+}
+  
+.arrow {
+  position: absolute;
+  top: 15px;
+  width: 50%;
+  height: 5px;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  animation: arrow 700ms linear infinite;
+}
+  
+.arrow::after, .arrow::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 5px;
+  right: -4px;
+  background-color: #fff;
+}
+  
+.arrow::after {
+  top: -6px;
+  transform: rotate(45deg); 
+}
+  
+.arrow::before {
+  top: 6px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  transform: rotate(-45deg);
 }
 
 .about {
-
+  
 }
+ 
